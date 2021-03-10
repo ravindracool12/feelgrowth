@@ -1,0 +1,86 @@
+.ps-btn--search-close {
+    display: inline-block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    background-color: rgba(#fff, .7);
+    @include border-radius(50%);
+    @include transition(all .4s ease);
+    @include hidden;
+    @include transform(scale(.1, .1));
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        background-color: $color-dark;
+        @include transform(translate(-50%, -50%) rotate(45deg));
+        @include transition(all .4s ease);
+    }
+    &:after {
+        @include transform(translate(-50%, -50%) rotate(-45deg));
+    }
+    &:hover {
+        background-color: #fff;
+        &:before, &:after {
+            background-color: #E31039;
+        }
+    }
+}
+
+.ps-search {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    &:before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        z-index: 100;
+        background-color: $color-1st;
+        @include border-radius(50%);
+        @include transform(translate(-50%, -50%));
+        @include transition(all .4s $ease-out-quad);
+        @include hidden;
+    }
+    &__content {
+        position: relative;
+        z-index: 100;
+        max-width: 800px;
+        width: 100%;
+        margin: 100px auto;
+        @include hidden;
+        @include transition(all .4s ease);
+        @include transform(scale(.5, .5));
+    }
+    &.open {
+        z-index: 1000;
+        &:before {
+            @include show;
+            width: calc(1920px * 2.5);
+            height: calc(1920px * 2.5);
+        }
+        .ps-search__content {
+            @include show;
+            @include transform(scale(1, 1));
+            @include transition-delay(.25s);
+        }
+    }
+    &.open + .ps-btn--search-close {
+        @include show;
+        @include transition-delay(.25s);
+        @include transform(scale(1, 1));
+        &:hover {
+            @include transition-delay(0);
+        }
+    }
+}
+

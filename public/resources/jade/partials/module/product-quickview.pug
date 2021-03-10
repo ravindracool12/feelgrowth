@@ -1,0 +1,60 @@
+#quickview.ps-modal.default
+    .ps-modal__content
+        .ps-modal__remove: i.fa.fa-remove
+        .ps-product--detail
+            .row
+                +column({cols: [6, 6, 12, 12]})
+                    .ps-product__thumbnail
+                        .ps-product__preview
+                            .ps-product__variants
+                                .item: img(src="images/shoe-detail/1.jpg" alt="")
+                                .item: img(src="images/shoe-detail/2.jpg" alt="")
+                                .item: img(src="images/shoe-detail/3.jpg" alt="")
+                                .item: img(src="images/shoe-detail/3.jpg" alt="")
+                                .item: img(src="images/shoe-detail/3.jpg" alt="")
+
+                        .ps-product__image
+                            .item: img(src="images/shoe-detail/1.jpg" alt="" data-zoom-image="images/shoe-detail/1.jpg")
+                            .item: img(src="images/shoe-detail/2.jpg" alt="" data-zoom-image="images/shoe-detail/2.jpg")
+                            .item: img(src="images/shoe-detail/3.jpg" alt="" data-zoom-image="images/shoe-detail/3.jpg")
+                +column({cols: [6, 6, 12, 12]})
+                    .ps-product__info
+                        .ps-product__rating
+                            select.ps-rating
+                                option(value='1') 1
+                                option(value='1') 2
+                                option(value='1') 3
+                                option(value='1') 4
+                                option(value='2') 5
+                        h1 Air strong  training
+                        p.ps-product__category
+                            a(href='#')   Men shoes
+                            | ,
+                            a(href='#')   Nike
+                            | ,
+                            a(href='#')   Jordan
+                        h3.ps-product__price <span>£</span> 115 <del><span>£</span> 330</del>
+                        .ps-product__short-desc
+                            p The Nike Free RN 2017 Men's Running Shoe weighs less than previous versions and features an updated knit material…
+                        .ps-product__block.ps-product__style
+                            h4 CHOOSE YOUR COLOR
+                            - for (var i = 0; i < 4; i ++)
+                                if i > 0
+                                    +radio--1("radio" + i, "ps-radio--inline ps-radio--color" + i)
+                                else
+                                    +radio--1("radio-0", "ps-radio--inline")
+                        .ps-product__block.ps-product__size
+                            h4 CHOOSE SIZE & QUANTITY
+                                a(href='#') Size chart
+                            select.ps-select.selectpicker(title="Select Size")
+                                - for (var i = 0; i < 6; i ++)
+                                option(value=i) #{i + 1}
+                            .form-group.ps-number
+                                input.form-control(type="text" value='1')
+                                span.up
+                                span.down
+                        .ps-product__shopping
+                            a(href='cart.html').ps-btn Order Now
+                            .ps-product__actions
+                                a(href='whishlist.html').mr-10: i.ps-icon-heart
+                                a(href='compare.html' title="Compare"): i.ps-icon-compare

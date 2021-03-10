@@ -1,0 +1,40 @@
+include ../../data/menu
+.header--sidebar
+    form(action="do_action" method="post" class="ps-form--search")
+        input.form-control(type="text" placeholder="Search Product…")
+        button: i.ps-icon-search
+header.header(data-sticky="true")
+    .header__top
+        .container-fluid
+            .row
+                +column({cols: [6, 8, 6, 12]})
+                    p 460 West 34th Street, 15th floor, New York  -  Hotline: 804-377-3580 - 804-399-3580
+                +column({cols: [6, 4, 6, 12]})
+                    .header__actions
+                        a(href='#') Login & Regiser
+                        .btn-group.ps-dropdown
+                            a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") USD
+                                i.fa.fa-angle-down
+                            ul.dropdown-menu
+                                li: a(href='#') <img src="images/flag/usa.svg" alt=""> USD
+                                li: a(href='#') <img src="images/flag/singapore.svg" alt=""> SGD
+                                li: a(href='#') <img src="images/flag/japan.svg" alt=""> JPN
+                        .btn-group.ps-dropdown
+                            a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Language
+                                i.fa.fa-angle-down
+                            ul.dropdown-menu
+                                li: a(href='#') English
+                                li: a(href='#') Japanese
+                                li: a(href='#') Chinese
+    nav.navigation
+        .container-fluid
+            .left
+                .header__logo: a(href='index.html').ps-logo: img(src="images/logo.png" alt="")
+            .center
+                +makeMenu(data_navigation, 'main-menu menu')
+            .right
+                .menu-toggle: span
+                include ../../common/cart
+                form(action="do_action" method="post" class="ps-form--search")
+                    input.form-control(type="text" placeholder="Search Product…")
+                    button: i.ps-icon-search

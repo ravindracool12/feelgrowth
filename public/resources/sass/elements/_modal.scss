@@ -1,0 +1,94 @@
+.ps-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000000;
+    background-color: rgba(#000, .9);
+    @include hidden;
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        width: 945px;
+    }
+    &__remove {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        background-color: #333;
+        cursor: pointer;
+        z-index: 1000;
+        @include border-radius(50%);
+        @include transform(translate(50%, -50%));
+        @include transition(all .4s ease);
+        i {
+            @include center();
+            color: #fff;
+            font-size: 20px;
+        }
+        &:hover {
+            background-color: $color-1st;
+        }
+    }
+    &.active {
+        @include show;
+    }
+    &.default {
+        .ps-modal__content {
+            padding: 0 50px;
+            width: 1170px;
+
+            background-color: #fff;
+
+        }
+    }
+    @include media("<lg") {
+        &.default {
+            .ps-modal__content {
+                width: 90%;
+                padding: 0 30px;
+                .ps-product--detail {
+                    .ps-product__thumbnail {
+                        margin-bottom: 30px;
+                        .ps-product__preview {
+                            display: none;
+                        }
+                        .ps-product__image {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    @include media("<md") {
+        &__content {
+            max-height: 800px;
+            overflow-y: auto;
+        }
+        &__remove {
+            @include transform(translate(0, 0));
+            background-color: transparent;
+            width: 30px;
+            height: 30px;
+            i {
+                color: #f44336;
+            }
+        }
+        &__content {
+            width: 90%;
+        }
+    }
+    @include media("<sm") {
+        &__content {
+            width: 85%;
+        }
+    }
+}

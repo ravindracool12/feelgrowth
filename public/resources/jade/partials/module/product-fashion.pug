@@ -1,0 +1,21 @@
+.ps-product--fashion
+    .ps-product__thumbnail
+        a(href='product-detail.html').ps-product__overlay
+        img(src="images/product/fashion-" + i + ".jpg" alt="")
+        if i == 4
+            .ps-badge: span New
+        else if i == 1 || i == 6
+            .ps-badge.ps-badge--sale-off: span -40%
+        ul.ps-product__actions
+            li: a(href='#' title="Quick View"): i.ps-icon-eye
+            li: a(href='#' title="Compare"): i.ps-icon-compare
+            li: a(href='#' title="Favorite"): i.ps-icon-heart
+    .ps-product__content
+        a(href='product-detail.html').ps-product__title PARKER BACKPACK
+        if i == 1 || i == 6
+            p.ps-product__price
+                del $450.89
+                | $200
+        else
+            p.ps-product__price $350.00
+        a(href='#' title="Add To Cart").ps-product__cart: i.ps-icon-cart-2

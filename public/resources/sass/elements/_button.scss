@@ -1,0 +1,137 @@
+.menu-toggle {
+    position: relative;
+    display: inline-block;
+    display: none;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    @include border-radius(50%);
+    span,
+    &:before,
+    &:after {
+        position: absolute;
+        right: 10px;
+        height: 2px;
+        width: 20px;
+        background-color: #303030;
+        z-index: 100;
+        @include transition(all 0.4s ease);
+    }
+    span {
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+    &:before,
+    &:after {
+        content: '';
+    }
+    &:before {
+        top: 12px;
+    }
+    &:after {
+        bottom: 12px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &.active {
+        span {
+            @include transform(translateX(100%));
+            visibility: hidden;
+            opacity: 0;
+        }
+        &:before,
+        &:after {
+            top: 50%;
+            bottom: auto;
+            width: 20px;
+            @include transform-origin(50% 50%);
+            background-color: #fc354c;
+        }
+        &:before {
+            @include transform(rotate(45deg));
+        }
+        &:after {
+            @include transform(rotate(-45deg));
+        }
+    }
+    @include media("<lg") {
+        display: inline-block;
+    }
+}
+
+.ps-btn, button.ps-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: $color-1st;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: #fff;
+    @include transition(all .4s ease);
+    &:hover {
+        color: #fff;
+        background-color: #333;
+    }
+}
+
+.ps-btn--outline, button.ps-btn--outline {
+    padding: 15px 30px;
+    background-color: #fff;
+    border: 2px solid #333;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    @include transition(all .4s ease);
+    &:before, &:after {
+        display: none;
+    }
+    &:hover {
+        color: #fff;
+        background-color: $color-1st;
+        border-color: $color-1st;
+    }
+}
+
+.ps-btn--favorite {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #999;
+    border: none;
+    vertical-align: top;
+    font-size: 20px;
+    i {
+        @include center();
+        color: #fff;
+    }
+    &:hover {
+        background-color: $color-1st;
+
+    }
+
+}
+
+.ps-btn--fullwidth {
+    width: 100%;
+    text-align: center;
+}
+
+.ps-btn--gray, button.ps-btn--gray {
+    background-color: #e5e5e5;
+    border: none;
+    color: #000;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    &:hover {
+        background-color: $color-1st;
+    }
+
+}

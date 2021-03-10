@@ -1,0 +1,198 @@
+.ps-subscribe {
+    margin-bottom: 60px;
+    background-color: #f7f7f7;
+    padding: 45px 150px;
+    .ps-subscribe__content {
+        margin-left: 30px;
+        position: relative;
+        padding-left: 100px;
+        i {
+            @include vertical-align();
+            left: 0;
+            font-size: 20px;
+            font-size: 45px;
+        }
+        h3 {
+            font-size: 18px;
+            line-height: 1.45em;
+            color: #333;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        p {
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 1.5em;
+            strong {
+                font-size: 16px;
+            }
+        }
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 0;
+        padding: 10px 10px 10px 100px;
+        background-color: #fff;
+        width: calc(100% - 70px);
+        float: left;
+        .form-group__icon {
+            position: absolute;
+            top: 15px;
+            left: 35px;
+            padding-right: 15px;
+            display: inline-block;
+            line-height: 30px;
+            border-right: 1px solid #aaa;
+            i {
+                color: #303030;
+            }
+        }
+        input.form-control {
+            border: none;
+            height: 40px;
+        }
+    }
+    button {
+        float: right;
+        width: 60px;
+        height: 60px;
+        background-color: #000;
+        border: none;
+        @include transition(all .4s ease-out);
+        i {
+            color: #fff;
+            font-size: 20px;
+        }
+        &:hover {
+            background-color: $color-1st;
+        }
+    }
+    @media (max-width: 1439px) {
+        padding: 45px 100px;
+    }
+    @include media("<lg") {
+        padding: 45px 50px;
+        .ps-subscribe__content {
+            margin-left: 0;
+            padding-left: 70px;
+        }
+    }
+    @include media("<md") {
+        .ps-subscribe__content {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-top: 60px;
+            padding-left: 0;
+            i {
+                top: 0;
+                left: 50%;
+                @include transform(translate(-50%, 0));
+            }
+        }
+        .ps-form--subscribe {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+    }
+    @include media("<sm") {
+        padding: 45px 15px;
+    }
+    @include media("<xs") {
+        .form-group {
+            padding-left: 0;
+            .form-group__icon {
+                display: none;
+            }
+        }
+    }
+}
+
+#contact-map {
+    height: 560px;
+}
+
+.ps-contact {
+    padding: 75px 0;
+}
+
+.ps-subscribe--popup {
+    padding: 100px 60px;
+    h3 {
+        font-size: 32px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    p {
+        line-height: 1.6em;
+        span {
+            display: block;
+            color: $color-1st;
+            font-size: 36px;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 1.4em;
+        }
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 0;
+        padding: 10px 10px 10px 100px;
+        background-color: #fff;
+        width: calc(100% - 70px);
+        float: left;
+        .form-group__icon {
+            position: absolute;
+            top: 15px;
+            left: 35px;
+            padding-right: 15px;
+            display: inline-block;
+            line-height: 30px;
+            border-right: 1px solid #aaa;
+            i {
+                color: #303030;
+            }
+        }
+        input.form-control {
+            border: none;
+            height: 40px;
+        }
+
+    }
+    button {
+        float: right;
+        width: 60px;
+        height: 60px;
+        background-color: #000;
+        border: none;
+        @include transition(all .4s ease-out);
+        i {
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+    .ps-form--subscribe-email {
+        width: 400px;
+    }
+    @include media("<sm") {
+        padding: 50px 30px;
+        .ps-form--subscribe-email {
+            width: 100%;
+        }
+        .form-group {
+            width: 100%;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+        }
+    }
+    @include media("<xs") {
+        .form-group {
+            padding-left: 15px;
+            .form-group__icon {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+include ../../data/posts
+main.ps-main
+    .ps-container
+        .ps-blog
+            .row
+                each val, index in blog_grid
+                    +column({cols: [4, 4, 6, 12]})
+                        .ps-post--grid
+                            .ps-post__thumbnail
+                                img(src="images/blog/"+(index + 1)+".jpg" alt="")
+                                a(href='blog-detail.html').ps-post__overlay
+                                .ps-post__badge Life Style
+                            .ps-post__content
+                                a(href='blog-detail.html').ps-post__title #{val}
+                                p.ps-post__meta By
+                                    a(href='#')  Alena Studio
+                                    |  - December 20, 2017
+                                p Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster…
+                                .ps-post__footer
+                                    a(href='#').ps-post__morelink Read More
+                                    a(href='#').ps-post__favorite
+                                        i.ps-icon-heart
+                                        |  12 Likes
+            .ps-pagination
+                    ul.pagination
+                        li: a(href="#"): i.fa.fa-angle-left
+                        li.active: a(href="#") 1
+                        li: a(href="#") 2
+                        li: a(href="#") 3
+                        li: a(href="#") ...
+                        li: a(href="#"): i.fa.fa-angle-right

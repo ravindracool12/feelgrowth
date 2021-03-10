@@ -1,0 +1,88 @@
+extends ../master
+
+block title
+    title Xuper - Pages listing
+
+block page_header
+
+    include ../utils/mixins
+
+block page_content
+    -
+        pages = [
+            {
+                url: 'index.html',
+                text: "homepage-1"
+            },
+            {
+                url: 'home-jewelry.html',
+                text: "homepage-jewelry"
+            },
+            {
+                url: 'home-fashion-2.html',
+                text: "homepage-fashion-2"
+            },
+            {
+                url: 'home-fashion-3.html',
+                text: "homepage-fashion-3"
+            },
+            {
+                url: 'product-grid.html',
+                text: "product-grid"
+            },
+            {
+                url: 'product-grid-right.html',
+                text: "product-grid-right"
+            },
+            {
+                url: 'product-grid-no-sidebar.html',
+                text: "product-grid-no-sidebar"
+            },
+            {
+                url: 'product-detail.html',
+                text: "product-detail"
+            },
+            {
+                url: 'compare.html',
+                text: "compare"
+            },
+            {
+                url: 'checkout.html',
+                text: "checkout"
+            },
+            {
+                url: 'cart.html',
+                text: "cart"
+            },
+            {
+                url: 'whishlist.html',
+                text: "whishlist"
+            },
+            {
+                url: 'blog-grid.html',
+                text: "blog-grid"
+            },
+            {
+                url: 'blog-list.html',
+                text: "blog-list"
+            },
+            {
+                url: 'blog-detail.html',
+                text: "blog-detail"
+            },
+            {
+                url: 'contact-us.html',
+                text: "contact-us"
+            },
+        ]
+    .container
+        .row
+            +column({cols: [6, 6, 6, 12]})
+                .jumbotron.mt-50
+                    ol(style="padding: 0; margin: 0; padding-left: 20px;")
+                        each val in pages
+                            li.mb-10: a(href=val.url target="_blank") #{val.text}
+
+
+
+

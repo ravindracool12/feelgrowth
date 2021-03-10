@@ -1,0 +1,21 @@
+.ps-product--yewelry
+    .ps-product__thumbnail
+        a(href='product-detail.html').ps-product__overlay
+        img(src="images/product/jewelry/"+i+".jpg" alt="")
+        if i == 1
+            .ps-badge.ps-badge--sale-off: span -40%
+        else if i == 3
+            .ps-badge: span New
+        ul.ps-product__actions
+            li: a(href='#' title="Quick View"): i.ps-icon-eye
+            li: a(href='#' title="Compare"): i.ps-icon-heart
+            li: a(href='#' title="Favorite"): i.ps-icon-cart-2
+    .ps-product__content
+        +rating
+        a(href='product-detail.html').ps-product__title PALOMA'S MELODY
+        if i == 1 || i == 6
+            p.ps-product__price
+                del $450.89
+                | $200
+        else
+            p.ps-product__price $350.00

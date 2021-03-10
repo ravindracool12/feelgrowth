@@ -1,0 +1,45 @@
+.ps-section.ps-section--jewelry.pt-30.pb-80
+    .ps-container
+        .ps-section__header.text-center
+            h2.ps-section__title Best Seller
+            p Featured collections created and curated by our editors
+        .ps-section__content
+            .ps-slider--center.owl-slider(
+            data-owl-auto= 'true',
+            data-owl-loop= 'true',
+            data-owl-speed= '5000',
+            data-owl-gap= '30',
+            data-owl-nav= 'true',
+            data-owl-dots= 'false',
+            data-owl-item= '4',
+            data-owl-item-xs= '1',
+            data-owl-item-sm= '3',
+            data-owl-item-md= '4',
+            data-owl-item-lg= '4',
+            data-owl-duration= '1000',
+            data-owl-mousedrag= 'on'
+            data-owl-nav-left="<i class='ps-icon-arrow-left'></i>",
+            data-owl-nav-right="<i class='ps-icon-arrow-right'></i>"
+            )
+                - for (var i = 1; i <=8; i ++)
+                    .ps-product--yewelry
+                        .ps-product__thumbnail
+                            a(href='product-detail.html').ps-product__overlay
+                            img(src="images/product/jewelry/"+i+".jpg"  alt="").lazy
+                            if i == 1
+                                .ps-badge.ps-badge--sale-off: span -40%
+                            else if i == 3
+                                .ps-badge: span New
+                            ul.ps-product__actions
+                                li: a(href='#' title="Quick View"): i.ps-icon-eye
+                                li: a(href='#' title="Compare"): i.ps-icon-heart
+                                li: a(href='#' title="Favorite"): i.ps-icon-cart-2
+                        .ps-product__content
+                            +rating
+                            a(href='product-detail.html').ps-product__title PALOMA'S MELODY
+                            if i == 1 || i == 6
+                                p.ps-product__price
+                                    del $450.89
+                                    | $200
+                            else
+                                p.ps-product__price $350.00

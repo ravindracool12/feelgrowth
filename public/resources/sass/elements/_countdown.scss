@@ -1,0 +1,91 @@
+.ps-countdown {
+    margin-bottom: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+        margin-right: 15px;
+        text-align: center;
+        p {
+            font-family: $font-1st;
+            font-size: 18px;
+            text-align: center;
+            color: #8d8d8d;
+            text-transform: uppercase;
+        }
+        &.divider, span {
+            vertical-align: top;
+            font-family: $font-2nd;
+            font-size: 48px;
+            text-align: left;
+            text-transform: uppercase;
+            color: #777;
+            line-height: 1em;
+        }
+    }
+    @include media("<xs") {
+        li {
+            &:not(.divider) {
+                margin-right: 10px;
+                font-size: 14px;
+                span {
+                    font-size: 30px;
+                }
+                p {
+                    line-height: 30px;
+                    font-size: 12px;
+                }
+            }
+            &.divider {
+                margin-right: 10px;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.ps-countdown--fashion {
+    li {
+        span {
+            font-size: 30px;
+            color: #222;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 0;
+            font-size: 12px;
+            font-weight: 600;
+            color: #222;
+        }
+        &.divider, span {
+            font-family: $font-1st;
+            color: #222;
+        }
+        &:not(.divider) {
+            padding: 15px 10px;
+            text-align: center;
+            min-width: 90px;
+            border: 3px solid #242424;
+        }
+        &.divider {
+            margin-top: 20px;
+        }
+    }
+    @include media("<xs") {
+        li {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: calc(50% - 20px);
+            span {
+                font-size: 20px;
+            }
+            p {
+                font-size: 8px;
+            }
+            &:not(.divider) {
+                min-width: 50px;
+            }
+        }
+    }
+}

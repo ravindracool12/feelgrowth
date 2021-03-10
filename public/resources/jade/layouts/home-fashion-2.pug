@@ -1,0 +1,56 @@
+extends ../master
+
+block title
+    title Xuper - Homepage Fashion 2
+
+block page_header
+    - var currentPage = 'homepage'
+    include ../partials/shared/header-sidebar
+    //include ../partials/module/subscribe-popup
+block page_content
+    .ps-banner--2
+        .owl-slider(
+        data-owl-auto= 'true',
+        data-owl-loop= 'true',
+        data-owl-speed= '5000',
+        data-owl-gap= '0',
+        data-owl-nav= 'false',
+        data-owl-dots= 'false',
+        data-owl-item= '1',
+        data-owl-item-xs= '1',
+        data-owl-item-sm= '1',
+        data-owl-item-md= '1',
+        data-owl-item-lg= '1',
+        data-owl-duration= '1000',
+        data-owl-mousedrag= 'on'
+        )
+            .ps-banner--owl.bg--cover(data-background="images/slider/slider-3.jpg")
+                .ps-banner__content
+                    h4 Features Product
+                    h2 BRIDAL Flower
+                    p Simple, Special & Sexy
+                    a(href='#').ps-btn Order Now
+            .ps-banner--owl.bg--cover(data-background="images/slider/slider-4.jpg")
+                .ps-banner__content
+                    h4 Features Product
+                    h2 BRIDAL Flower
+                    p Simple, Special & Sexy
+                    a(href='#').ps-btn Order Now
+    .ps-template-3
+        .ps-container
+            include ../partials/homepage-3/best-seller
+            include ../partials/homepage-3/collection
+            include ../partials/homepage-3/new-arrival
+            include ../partials/homepage-3/partners
+            include ../partials/homepage-3/blog
+        include ../partials/homepage-3/contact-map
+
+
+
+
+
+
+
+
+
+

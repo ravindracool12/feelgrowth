@@ -1,0 +1,46 @@
+extends ../master
+
+block title
+    title Xuper - Homepage
+block append page_styles
+    link(rel="stylesheet", href="plugins/revolution/css/settings.css")
+    link(rel="stylesheet", href="plugins/revolution/css/layers.css")
+    link(rel="stylesheet", href="plugins/revolution/css/navigation.css")
+
+block append page_scripts
+    <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="js/slider-1.js"></script>
+
+block append page_scripts
+
+block page_header
+    - var currentPage = 'homepage'
+    include ../partials/shared/header
+    include ../partials/module/subscribe-popup
+block page_content
+    .ps-home-slider
+        include ../partials/slider-1
+    include ../partials/homepage-1/collection
+    include ../partials/homepage-1/special-product
+    include ../partials/homepage-1/offer
+    include ../partials/homepage-1/popular-product
+    include ../partials/homepage-1/home-blog
+    include ../partials/section/partners
+    include ../partials/section/shop-features
+    include ../partials/footer
+    include ../partials/module/product-quickview
+
+
+
+
+
+
+
+

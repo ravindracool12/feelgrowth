@@ -1,0 +1,47 @@
+include ../../data/posts
+main.ps-main
+    .ps-container
+        .ps-blog
+            .row
+                +column({cols: [9, 8, 12, 12]})
+                    each val, index in blog_grid
+                        if index < 4
+                            .ps-post--list
+                                .ps-post__thumbnail
+                                    img(src="images/blog/list-"+(index+1)+".jpg" alt="")
+                                    a(href='blog-detail.html').ps-post__overlay
+                                .ps-post__content
+                                    a(href='blog-detail.html').ps-post__title #{val}
+                                    p.ps-post__meta By
+                                        a(href='#')  Alena Studio
+                                        |  - December 20, 2017
+                                        |  - Lifestyle, Trendy, Ugly, Minimal
+                                    p Cancun is back, better than ever! Over a hundred Mexico resorts have reopened and the state tourism minister predicts Cancun will draw as many visitors in 2006 as it did two years ago. And the travel deals are great! If you haven’t been, now may be the best time to take a vacation to Cancun.
+                                    .ps-post__footer
+                                        a(href='#').ps-post__morelink Read More
+                                        .ps-post__actions
+                                            a(href='#')
+                                                i.ps-icon-heart
+                                                |  12 Likes
+                                            a(href='#')
+                                                .fa.fa-comment
+                                                |  12 Comments
+                                            .ps-post__shared
+                                                a(href='#')
+                                                    i.fa.fa-share-alt
+                                                    | Share
+                                                ul
+                                                    li: a(href='#'): i.fa.fa-facebook
+                                                    li: a(href='#'): i.fa.fa-twitter
+                                                    li: a(href='#'): i.fa.fa-google-plus
+                    .ps-pagination.square.left
+                        ul.pagination
+                            li: a(href="#"): i.fa.fa-angle-left
+                            li.active: a(href="#") 1
+                            li: a(href="#") 2
+                            li: a(href="#") 3
+                            li: a(href="#") ...
+                            li: a(href="#"): i.fa.fa-angle-right
+                +column({cols: [3, 4, 12, 12]})
+                    include ../module/blog-sidebar
+

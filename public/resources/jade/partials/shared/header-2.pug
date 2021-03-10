@@ -1,0 +1,67 @@
+header.header--2
+    .header__top
+        .container-fluid
+            .header__actions.left
+                .btn-group.ps-dropdown
+                    a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") USD
+                        i.fa.fa-angle-down
+                    ul.dropdown-menu
+                        li: a(href='#') <img src="images/flag/usa.svg" alt=""> USD
+                        li: a(href='#') <img src="images/flag/singapore.svg" alt=""> SGD
+                        li: a(href='#') <img src="images/flag/japan.svg" alt=""> JPN
+                .btn-group.ps-dropdown
+                    a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Language
+                        i.fa.fa-angle-down
+                    ul.dropdown-menu
+                        li: a(href='#') English
+                        li: a(href='#') Japanese
+                        li: a(href='#') Chinese
+            .center
+                p
+                    span FREE SHIPPING OVER $50
+                    |  when purchase pruduct of Collection Summer. Please contact : 123-456-7890
+            .header__actions.right
+                a(href='#'): i.fa.fa-user
+                a(href='#'): i.ps-icon-search
+                .btn-group.ps-dropdown
+                    a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                        i.ps-icon-cart.mr-10
+                        span.number 11
+                        | items - $500
+                        i.fa.fa-angle-down
+                    ul.dropdown-menu
+                        li: a(href='cart.html') View Cart
+                        li: a(href='checkout.html') Checkout
+                        li: a(href='whishlist.html') Your Whishlist
+    .navigation
+        .left
+            ul.menu.menu--2
+                li(class=(currentPage == 'homepage')? 'current-menu-item menu-item-has-children dropdown ' : 'menu-item-has-item dropdown' )
+                    a(href='#') Home
+                    ul.sub-menu
+                        li: a(href='index.html') Home Fashion
+                        li: a(href='home-jewelry.html') Home Jewelry
+                        li: a(href='home-fashion-2.html') Home Fashion #2
+                li(class=(currentPage == 'product')? 'current-menu-item ' : ''): a(href='#') Men
+                li(class=(currentPage == 'product')? 'current-menu-item ' : ''): a(href='#') Women
+        .center
+            a(href='home-jewelry.html').ps-logo: img(src="images/logo-jewelry.png" alt="")
+        .right
+            ul.menu.menu--2
+                li(class=(currentPage == 'product')? 'current-menu-item ' : ''): a(href='#') About
+                li(class=(currentPage == 'product')? 'current-menu-item ' : ''): a(href='#') News
+                li(class=(currentPage == 'product')? 'current-menu-item ' : ''): a(href='#') Contact
+    .navigation--mobile
+        a(href='home-jewelry.html').ps-logo: img(src="images/logo-jewelry.png" alt="")
+        .menu-toggle: span
+        ul.menu.menu--2
+            li(class=(currentPage == 'homepage')? 'current-menu-item menu-item-has-children dropdown ' : 'menu-item-has-item dropdown' )
+                a(href='#') Home
+                ul.sub-menu
+                    li: a(href='index.html') Home Fashion
+                    li: a(href='home-fashion-2.html') Home Fashion #2
+            li(class=(currentPage == 'product')? 'current-menu-item ' : ''): a(href='#') Men
+            li(class=(currentPage == 'product')? 'current-menu-item ' : ''): a(href='#') Women
+            li(class=(currentPage == 'product')? 'current-menu-item ' : ''): a(href='#') About
+            li(class=(currentPage == 'product')? 'current-menu-item ' : ''): a(href='#') News
+            li(class=(currentPage == 'product')? 'current-menu-item ' : ''): a(href='#') Contact

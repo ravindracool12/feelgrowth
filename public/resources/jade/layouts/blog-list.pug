@@ -1,0 +1,25 @@
+extends ../master
+
+block title
+    title Xuper - Blog List
+
+block page_header
+    - var currentPage = 'homepage'
+    include ../partials/shared/header
+block page_content
+    .ps-hero
+        .container
+            h3 Blog List
+            p Our Stories
+    include ../partials/pages/blog-list
+    include ../partials/section/partners
+    include ../partials/section/shop-features
+    include ../partials/footer
+
+
+
+
+
+
+
+

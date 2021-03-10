@@ -1,0 +1,67 @@
+.ps-filter
+    .row
+        +column({cols: [8, 8, 6, 12]})
+            .ps-filter__trigger
+                .ps-filter__icon: span
+                p Filter Product
+        +column({cols: [4, 4, 6, 12]})
+            .ps-filter__result
+                p Showing 1–12 of 35 results
+    .ps-filter__content
+        .ps-filter__column(data-mh="column")
+            h3 SORT CATEGORIES BY
+            ul.ps-list--filter
+                li.current: a(href='product-listing.html') All
+                li: a(href='product-listing.html') Men
+                li: a(href='product-listing.html') Women
+                li: a(href='product-listing.html') Suite & Jean
+                li: a(href='product-listing.html') Accessories
+                li: a(href='product-listing.html') Kids
+                li: a(href='product-listing.html') Handmade
+        .ps-filter__column(data-mh="column")
+            h3 SORT PRODUCTS BY
+            ul.ps-list--filter
+                li.current: a(href='product-listing.html') Default Sorting
+                li: a(href='product-listing.html') Sort by popularity
+                li: a(href='product-listing.html') Sort by average rating
+                li: a(href='product-listing.html') Sort by newness
+                li: a(href='product-listing.html') Sort by price: low to high
+                li: a(href='product-listing.html') Sort by price: high to low
+        .ps-filter__column(data-mh="column")
+            h3 FILTER BY PRICE
+            ul.ps-list--filter
+                li.current: a(href='product-listing.html') All
+                li: a(href='product-listing.html') £10.00 - £110.00
+                li: a(href='product-listing.html') £110.00 - £210.00
+                li: a(href='product-listing.html') £210.00 - £310.00
+                li: a(href='product-listing.html') £310.00+
+        .ps-filter__column(data-mh="column")
+            h3 FILTER BY PRICE
+            ul.ps-list--color
+                - for (var i = 0; i < 12; i ++)
+                    li: a(href='#')
+        .ps-filter__column(data-mh="column")
+            h3 FILTER BY PRICE
+            ul.ps-list--filter
+                li.current: a(href='product-listing.html') All
+                li: a(href='product-listing.html') New
+                li: a(href='product-listing.html') SaleOff
+                li: a(href='product-listing.html') Show Only Products On Sale
+                li: a(href='product-listing.html') In Stock Only
+                li: a(href='product-listing.html') Out of stock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

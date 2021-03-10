@@ -1,0 +1,12 @@
+#subscribe-modal.ps-modal
+    .ps-modal__content.ps-subscribe--popup.bg--cover(data-background="images/subscribe.jpg")
+        .ps-modal__remove: i.fa.fa-remove
+        h3 subscribe email
+        p Follow us & get
+            span 20% OFF
+            | coupon for first purchase !!!!!
+        form(action="do_action" method="post" class="ps-form--subscribe-email")
+            .form-group
+                .form-group__icon: i.fa.fa-envelope
+                input.form-control(type="text" placeholder="Type Your Email")
+            button: i.ps-icon-arrow-right

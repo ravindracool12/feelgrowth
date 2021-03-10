@@ -1,0 +1,312 @@
+.ps-block--offer {
+    display: table;
+    background-color: #fafafa;
+    width: 100%;
+    @extend %list-reset;
+    .ps-block__left, .ps-block__right {
+        display: table-cell;
+    }
+    .ps-block__left {
+        width: calc(100% - 450px);
+    }
+    .ps-block__right {
+        padding: 55px 0;
+        display: table-cell;
+        width: 450px;
+        text-align: center;
+        vertical-align: middle;
+        h3 {
+            margin-bottom: 15px;
+            font-family: $font-2nd;
+            font-size: 24px;
+            line-height: 1.3em;
+            color: #333;
+            font-weight: 400;
+        }
+        p {
+            display: block;
+            margin-bottom: 10px;
+            font-family: $font-2nd;
+            font-size: 14px;
+            color: #333;
+            line-height: 50px;
+            span {
+                font-size: 48px;
+                color: $color-1st;
+                vertical-align: middle;
+            }
+        }
+        .ps-btn {
+            line-height: 25px;
+            padding: 10px 50px;
+            background-color: $color-1st;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            &:hover {
+                background-color: darken($color-1st, 15%);
+            }
+        }
+    }
+    @include media("<md") {
+        .ps-block__left {
+            width: 30%;
+        }
+        .ps-block__right {
+            width: 70%;
+        }
+    }
+    @include media("<sm") {
+        .ps-block__left {
+            width: 0;
+        }
+        .ps-block__right {
+            width: 100%;
+        }
+    }
+}
+
+.ps-block--offer-fashion {
+    display: table;
+    width: 100%;
+    .ps-block__left, .ps-block__right {
+        display: table-cell;
+        width: 50%;
+    }
+    .ps-block__right {
+        padding: 80px 0 80px 50px;
+        padding-left: 50px;
+    }
+    .ps-btn--outline {
+        display: inline-block;
+        padding: 15px 60px;
+        background-color: transparent;
+        &:hover {
+            background-color: $color-1st;
+        }
+    }
+    @include media("<lg") {
+        display: block;
+        .ps-block__left, .ps-block__right {
+            display: block;
+            width: 100%;
+        }
+        .ps-block__left {
+            height: 500px;
+        }
+        .ps-block__right {
+            padding: 50px 0;
+            text-align: center;
+        }
+    }
+    @include media("<sm") {
+        .ps-block__left {
+            height: 400px;
+        }
+    }
+    @include media("<xs") {
+        .ps-block__left {
+            height: 300px;
+        }
+    }
+}
+
+.ps-block--contact {
+    margin-bottom: 20px;
+    @extend %list-reset;
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1em;
+        letter-spacing: 0.2px;
+        color: #626262;
+    }
+    h4 {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.2em;
+        letter-spacing: 0.2px;
+        color: #626262;
+        font-weight: 400;
+    }
+    p {
+        color: #777;
+        i {
+            margin-right: 5px;
+        }
+    }
+    .ps-social {
+        li {
+            a {
+                background-color: transparent;
+                i {
+                    color: #b2b2b2;
+                }
+                &:hover {
+                    i {
+                        color: $color-1st;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ps-review {
+    margin-bottom: 40px;
+    @include clearfix;
+    .ps-review__thumbnail {
+        float: left;
+        width: 100px;
+        img {
+            width: 80px;
+            @include border-radius(50%);
+        }
+    }
+    .ps-review__content {
+        float: left;
+        width: calc(100% - 100px);
+        padding: 25px;
+        @include border-radius(4px);
+        background-color: #f1f1f1;
+        p {
+            font-size: 14px;
+            line-height: 1.5em;
+            text-align: left;
+            color: #5b5b5b;
+        }
+    }
+    header {
+        margin-bottom: 10px;
+        .br-widget, .br-wrapper {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        p {
+            display: inline-block;
+            font-size: 14px;
+            color: #5b5b5b;
+            a {
+                font-weight: 700;
+                color: $color-1st;
+            }
+        }
+    }
+    @include media("<sm") {
+        .ps-review__thumbnail {
+            margin-bottom: 20px;
+            float: none;
+            width: 100%;
+        }
+        .ps-review__content {
+            float: none;
+            width: 100%;
+            padding: 15px;
+        }
+    }
+}
+
+.ps-author {
+    margin-bottom: 40px;
+    @include clearfix();
+    &__thumbnail {
+        width: 135px;
+        float: left;
+    }
+    &__content {
+        float: left;
+        width: calc(100% - 135px);
+        padding: 20px;
+        background-color: #f7f7f7;
+        > header {
+            h4 {
+                margin-bottom: 0;
+                font-size: 18px;
+                color: #ffa827;
+                line-height: 1.6em;
+            }
+            p {
+                font-size: 12px;
+                color: #8d8d8d;
+            }
+        }
+        p {
+            color: #8d8d8d;
+            line-height: 1.8em;
+
+        }
+    }
+}
+
+.ps-comments {
+    .ps-heading {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #323232;
+        font-weight: 600;
+    }
+}
+
+.ps-comment {
+    margin-bottom: 60px;
+    @include clearfix();
+    &__thumbnail {
+        float: left;
+        width: 100px;
+        img {
+            @include border-radius(50%);
+            width: 80px;
+        }
+    }
+    &__content {
+        float: left;
+        width: calc(100% - 100px);
+        background-color: #f7f7f7;
+        padding: 20px;
+        @include border-radius(0 20px 0 20px);
+        > header {
+            h4 {
+                display: inline-block;
+                font-size: 14px;
+                color: #000;
+                span {
+                    margin-left: 10px;
+                    color: #989898;
+                }
+            }
+            a {
+                float: right;
+                font-size: 16px;
+                color: $color-1st;
+                text-transform: uppercase;
+                font-weight: 600;
+                i {
+                    margin-left: 10px;
+                }
+            }
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.8em;
+            color: #8d8d8d;
+        }
+    }
+    .ps-comment {
+        margin-top: 30px;
+        .ps-comment__content {
+            background-color: #fff;
+            @include border-radius(0 10px 0 10px);
+        }
+    }
+}
+
+.lg-outer {
+    z-index: 999999;
+}
+
+.ps-success {
+    color: #13aa18;
+}
+.ps-danger {
+    color: #f44336;
+}

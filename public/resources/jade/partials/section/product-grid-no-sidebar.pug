@@ -1,0 +1,20 @@
+main.ps-main
+    .ps-container
+        .ps-product-group.no-sidebar.pt-40(data-item="4")
+            .ps-product-group__header
+                include ../module/product-filter
+            .ps-product-group__content
+                .ps-product-group__action
+                - for (var i = 1; i <=8; i ++)
+                    .ps-product-wrap: include ../module/product-fashion
+                - for (var i = 1; i <=6; i ++)
+                    .ps-product-wrap: include ../module/product-fashion
+            .ps-product-group__footer
+                .ps-pagination.mb-50
+                    ul.pagination
+                        li: a(href="#"): i.fa.fa-angle-left
+                        li.active: a(href="#") 1
+                        li: a(href="#") 2
+                        li: a(href="#") 3
+                        li: a(href="#") ...
+                        li: a(href="#"): i.fa.fa-angle-right

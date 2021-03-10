@@ -1,0 +1,31 @@
+main.ps-main.ps-products-listing
+    .ps-content(data-mh="product-page")
+        .ps-product-group(data-item="5")
+            .ps-product-group__header
+                .row
+                    +column({cols: [6, 6, 12, 12]})
+                        a(href='product-listing.html').ps-collection: img(src="images/collection/product-grid/1.jpg" alt="")
+                    +column({cols: [6, 6, 12, 12]})
+                        a(href='product-listing.html').ps-collection: img(src="images/collection/product-grid/2.jpg" alt="")
+            .ps-product-group__content
+                .ps-product-group__action
+                    .row
+                        +column({cols: [6, 6, 6, 12]})
+                            p Showing 1–12 of 35 results
+                        +column({cols: [6, 6, 6, 12]})
+                            +select(4, "Default sorting")
+                - for (var i = 1; i <=8; i ++)
+                    .ps-product-wrap: include ../module/product-fashion
+                - for (var i = 1; i <=6; i ++)
+                    .ps-product-wrap: include ../module/product-fashion
+            .ps-product-group__footer
+                .ps-pagination
+                    ul.pagination
+                        li: a(href="#"): i.fa.fa-angle-left
+                        li.active: a(href="#") 1
+                        li: a(href="#") 2
+                        li: a(href="#") 3
+                        li: a(href="#") ...
+                        li: a(href="#"): i.fa.fa-angle-right
+    aside.ps-sidebar(data-mh="product-page")
+        include ../module/product-sidebar

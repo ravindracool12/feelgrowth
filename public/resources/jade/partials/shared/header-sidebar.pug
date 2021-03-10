@@ -1,0 +1,41 @@
+include ../../data/menu
+header.header--left
+    .menu-toggle: span
+    .header__top
+        .header__actions
+            a(href='#') Login & Regiser
+            .btn-group.ps-dropdown
+                a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") USD
+                    i.fa.fa-angle-down
+                ul.dropdown-menu
+                    li: a(href='#') <img src="images/flag/usa.svg" alt=""> USD
+                    li: a(href='#') <img src="images/flag/singapore.svg" alt=""> SGD
+                    li: a(href='#') <img src="images/flag/japan.svg" alt=""> JPN
+            .btn-group.ps-dropdown
+                a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Language
+                    i.fa.fa-angle-down
+                ul.dropdown-menu
+                    li: a(href='#') English
+                    li: a(href='#') Japanese
+                    li: a(href='#') Chinese
+        .header__brand
+            a(href='#').ps-logo: img(src="images/logo-3.png" alt="")
+            .header__links
+                a(href='#'): i.ps-icon-profile
+                a(href='#'): i.ps-icon-search
+                a(href='#').cart
+                    span: i 20
+                    i.ps-icon-cart
+    +makeMenu(data_navigation, 'menu menu--sidebar')
+    .header__bottom
+        ul.ps-list--social
+            li: a(href='#'): i.fa.fa-facebook
+            li: a(href='#'): i.fa.fa-twitter
+            li: a(href='#'): i.fa.fa-dribbble
+        p.ps-copyright &copy; Copyright by
+            a(href='#')  Xuper Store.
+        .ps-payment-methods
+            a(href='#'): img(src="images/payment-method/paypal.png" alt="")
+            a(href='#'): img(src="images/payment-method/visa.png" alt="")
+            a(href='#'): img(src="images/payment-method/master-card.png" alt="")
+

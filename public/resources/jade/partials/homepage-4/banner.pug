@@ -1,0 +1,28 @@
+.ps-fashion3--banner
+    .left
+        .ps-slider--fashion3.owl-slider(
+        data-owl-auto= 'true',
+        data-owl-loop= 'false',
+        data-owl-speed= '5000',
+        data-owl-gap= '0',
+        data-owl-nav= 'false',
+        data-owl-dots= 'false',
+        data-owl-item= '1',
+        data-owl-item-xs= '1',
+        data-owl-item-sm= '1',
+        data-owl-item-md= '1',
+        data-owl-item-lg= '1',
+        data-owl-duration= '1000',
+        data-owl-mousedrag= 'false',
+
+        )
+            - for (var i = 0; i < 5; i ++)
+                .ps-banner--3.bg--cover(data-background="images/banner/fashion-3.jpg")
+                    img(src="images/banner/fashion-3.jpg" alt="")
+    .right
+        ul.ps-list--banner
+            li.active: a(href='#') Deal of the Week: Free 50%
+            li: a(href='#') New COLORS Safety Razors
+            li: a(href='#') SHAVING CREAM SAMPLE PACKS
+            li: a(href='#') SEE NEWEST PRODUCTS
+            li: a(href='#') COLLECTION THIS SUMMER

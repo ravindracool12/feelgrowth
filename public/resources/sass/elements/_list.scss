@@ -1,0 +1,287 @@
+.ps-social {
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        a {
+            display: block;
+            position: relative;
+            width: 34px;
+            height: 34px;
+            background-color: #b4b4b4;
+            @include border-radius(50%);
+            @include transition(all .4s $timing);
+            i {
+                @include center();
+                color: #fff;
+            }
+            &:hover {
+                background-color: $color-1st;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.ps-list--line {
+    li {
+        a {
+            position: relative;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 2.4em;
+            letter-spacing: 0.3px;
+            text-align: left;
+            color: #403c34;
+
+            @include transition(all .4s ease);
+            &:before {
+                content: '';
+                @include vertical-align();
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $color-1st;
+                @include transition(all .4s ease);
+            }
+        }
+        &:hover {
+            > a {
+                padding-left: 15px;
+                color: $color-1st;
+                &:before {
+                    width: 10px;
+                    @include transition-delay(.1s);
+                }
+            }
+        }
+    }
+}
+
+.ps-list--social {
+    display: block;
+    text-align: center;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        a {
+            position: relative;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            color: #fff;
+            background-color: #b4b4b4;
+            @include border-radius(50%);
+            i {
+                @include center();
+                color: #2b3147;
+            }
+            &:hover {
+                background-color: $color-1st;
+            }
+        }
+        &:last-child {
+            margin-right: 10px;
+        }
+    }
+}
+
+.ps-list--arrow {
+    a {
+        position: relative;
+        display: block;
+        padding-left: 15px;
+        font-family: $font-1st;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        color: #626262;
+        &:before {
+            content: "\f105";
+            @include vertical-align();
+            left: 0;
+            font-family: FontAwesome;
+        }
+        &:hover {
+            color: $color-1st;
+            .circle {
+                background-color: $color-2nd;
+                border-color: $color-2nd;
+                &:before {
+                    color: #fff;
+                    @include show;
+                }
+            }
+        }
+    }
+
+    li {
+        margin-bottom: 20px;
+        &.current {
+            a {
+                color: $color-2nd;
+            }
+            .circle {
+                background-color: $color-2nd;
+                &:before {
+                    @include show;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.ps-list--number {
+    list-style: decimal;
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+.ps-list--checked {
+    li {
+        margin-bottom: 20px;
+        a {
+            position: relative;
+            display: block;
+            padding-left: 30px;
+            font-size: 14px;
+            color: #313131;
+            &:before {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 20px;
+                height: 20px;
+                border: solid 1px #8d8d8d;
+                @include transition(all .4s ease);
+            }
+            &:after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 4px;
+                left: 8px;
+                color: #fff;
+                width: 6px;
+                height: 10px;
+                border-right: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                @include transform(rotate(45deg));
+                @include hidden;
+            }
+            &:hover {
+                &:before {
+                    background-color: $color-1st;
+                    border-color: $color-1st;
+                }
+                &:after {
+                    @include show;
+                }
+            }
+        }
+        &.current {
+            a {
+                &:before {
+                    background-color: $color-1st;
+                    border-color: $color-1st;
+                }
+                &:after {
+                    @include show;
+                }
+            }
+        }
+    }
+}
+
+.ps-list--color {
+    li {
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        a {
+            display: inline-block;
+            @include circle(25px, #50cf96);
+        }
+        &:nth-child(2) {
+            a {
+                background-color: #d0011b;
+            }
+        }
+        &:nth-child(3) {
+            a {
+                background-color: #f8e81c;
+            }
+        }
+        &:nth-child(4) {
+            a {
+                background-color: #8b572a;
+            }
+        }
+        &:nth-child(5) {
+            a {
+                background-color: #bd0fe1;
+            }
+        }
+        &:nth-child(6) {
+            a {
+                background-color: #4990e2;
+            }
+        }
+        &:nth-child(7) {
+            a {
+                background-color: #000;
+            }
+        }
+        &:nth-child(8) {
+            a {
+                background-color: #000;
+            }
+        }
+        &:nth-child(9) {
+            a {
+                background-color: #cfb850;
+            }
+        }
+        &:nth-child(10) {
+            a {
+                background-color: #50cacf;
+            }
+        }
+        &:nth-child(11) {
+            a {
+                background-color: #e29849;
+            }
+        }
+        &:nth-child(12) {
+            a {
+                background-color: #50cf96;
+            }
+        }
+        &:nth-child(13) {
+            a {
+                background-color: #50cf96;
+            }
+        }
+    }
+}
+
+.ps-list--filter {
+    li {
+        a {
+            line-height: 30px;
+            color: #777;
+            &:hover {
+                color: $color-1st;
+            }
+        }
+        &.current {
+            a {
+                color: $color-1st;
+            }
+        }
+    }
+}

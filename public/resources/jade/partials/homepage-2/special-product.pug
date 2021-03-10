@@ -1,0 +1,29 @@
+.ps-section.ps-section--jewelry.ps-section--special-product.masonry-root.pt-30.pb-80
+    .ps-container
+        .ps-section__header.text-center
+            h2.ps-section__title Special Product
+            p Featured collections created and curated by our editors
+            ul.ps-masonry__filter
+              li.current: a(href='#' data-filter="*") All
+              li: a(href='#' data-filter=".bracelets") Bracelets
+              li: a(href='#' data-filter=".earrings") Earrings
+              li: a(href='#' data-filter=".watches") Watches
+              li: a(href='#' data-filter=".rings") Rings
+              li: a(href='#' data-filter=".gifts") Gifts
+        .ps-section__content
+            .masonry-wrapper(data-col-md="4" data-col-sm="2" data-col-xs='1' data-gap="30" data-radio='100%')
+                .ps-masonry
+                    .grid-sizer
+                    - for (var i = 1; i <=8; i ++)
+                        if (i == 1)
+                            .grid-item.bracelets: .grid-item__content-wrapper: include ../module/yewelry
+                        else if (i == 2)
+                            .grid-item.earrings: .grid-item__content-wrapper: include ../module/yewelry
+                        else if (i == 4)
+                            .grid-item.watches: .grid-item__content-wrapper: include ../module/yewelry
+                        else if (i == 5)
+                            .grid-item.rings: .grid-item__content-wrapper: include ../module/yewelry
+                        else if (i == 6)
+                            .grid-item.rings: .grid-item__content-wrapper: include ../module/yewelry
+                        else
+                            .grid-item.gifts: .grid-item__content-wrapper: include ../module/yewelry

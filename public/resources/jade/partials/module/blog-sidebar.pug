@@ -1,0 +1,37 @@
+.ps-blog__sidebar
+    .widget.widget_search
+        form(action="do_action" method="post" class="ps-form--widget-search")
+            input.form-control(type="text" placeholder="Search Post...")
+            button: i.ps-icon-search
+    .widget.widget_category
+        h3.widget-title Archive
+        ul.ps-list--arrow
+            li: a(href='#') All Shoes (321)
+            li: a(href='#') Amazin’ Glazin’
+            li: a(href='#') The Crusty Croissant
+            li: a(href='#') The Rolling Pin
+            li: a(href='#') Skippity Scones
+            li: a(href='#') Mad Batter
+            li: a(href='#') Confection Connection
+    .widget.widget_ads
+        h3.widget-title Ads Banner
+        img(src="images/ads.jpg" alt="")
+    .widget.widget_recent-posts
+        h3.widget-title Recent Post
+        - for (var i = 0; i < 3; i ++)
+            .ps-post--sidebar
+                .ps-post__thumbnail
+                    a(href='#').ps-post__overlay
+                    img(src="images/blog/sidebar/"+(i+1)+".jpg" alt="")
+                .ps-post__content
+                    a(href='blog-detail.html').ps-post__title Micenas Placerat Nibh Loreming Fentum
+                    p Sep 29, 2017
+    .widget.widget_tags
+        h3.widget-title Tags
+        a(href='#') Men
+        a(href='#') Woman
+        a(href='#') B&C
+        a(href='#') Ugly fashion
+        a(href='#') Nike
+        a(href='#') Diar
+        a(href='#') Adidas

@@ -1,0 +1,66 @@
+include ../../data/menu
+.header--3
+    .ps-container
+        .header__top
+            .left
+                .header__actions
+                    .btn-group.ps-dropdown
+                        a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") USD
+                            i.fa.fa-angle-down
+                        ul.dropdown-menu
+                            li: a(href='#') <img src="images/flag/usa.svg" alt=""> USD
+                            li: a(href='#') <img src="images/flag/singapore.svg" alt=""> SGD
+                            li: a(href='#') <img src="images/flag/japan.svg" alt=""> JPN
+                    .btn-group.ps-dropdown
+                        a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Language
+                            i.fa.fa-angle-down
+                        ul.dropdown-menu
+                            li: a(href='#') English
+                            li: a(href='#') Japanese
+                            li: a(href='#') Chinese
+            .center
+                a(href='home-fashion-3.html').ps-logo: img(src="images/logo-4.png" alt="")
+            .right
+                .header__links
+                    a(href='#'): i.ps-icon-profile
+                    a(href='#'): i.ps-icon-search
+                    a(href='#').cart
+                        span: i 20
+                        i.ps-icon-cart
+    nav.navigation
+        .ps-container
+            +makeMenu(data_navigation, 'main-menu menu')
+            .menu-toggle: span
+    .header__services
+        .container
+            .ps-slider--services.ps-slider--center.owl-slider(
+            data-owl-auto= 'true',
+            data-owl-loop= 'true',
+            data-owl-speed= '7000',
+            data-owl-gap= '0',
+            data-owl-nav= 'true',
+            data-owl-dots= 'false',
+            data-owl-item= '1',
+            data-owl-item-xs= '1',
+            data-owl-item-sm= '1',
+            data-owl-item-md= '1',
+            data-owl-item-lg= '1',
+            data-owl-duration= '1000',
+            data-owl-mousedrag= 'on'
+            )
+                - for (var i = 0; i < 3; i ++)
+                    if i == 1
+                        p
+                            i.ps-icon-delivery
+                            strong Free delivery
+                            | : Get free standard delivery on every order with Xuper Store
+                    else if i == 2
+                        p
+                            i.ps-icon-delivery
+                            strong 100% MONEY BACK.
+                            | : You may return most new, unopened items sold within 30 days...
+                    else
+                        p
+                            i.ps-icon-delivery
+                            strong SUPPORT 24/7.
+                            | : We offer a 24/7 customer hotline so you’re never alone...
